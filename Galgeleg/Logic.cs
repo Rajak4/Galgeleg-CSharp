@@ -17,6 +17,26 @@ namespace Galgeleg
         private bool gameIsWon;
         private bool gameIsLost;
         private String visibleWord;
+        private int numLives; // Skal lige sættes et sted
+
+
+        public Logic()
+        {
+            wordList.Add("Hej");
+            wordList.Add("Java");
+            wordList.Add("C");
+            wordList.Add("Python");
+            wordList.Add("csharp");
+            wordList.Add("Ruby");
+            wordList.Add("Fortan");
+            wordList.Add("HTML");
+        }
+
+        public int NumLives
+        {
+            get { return numLives; }
+            set { numLives = value; }
+        }
 
         public String VisibleWord
         {
@@ -60,6 +80,8 @@ namespace Galgeleg
             set { gameIsLost = value; }
         }
 
+
+
         public void resetGame() 
         {
             Random random = new Random();
@@ -90,6 +112,30 @@ namespace Galgeleg
                     visibleWord += "*";
                 }
             }
+        }
+        public void submitLetter(char letter)
+        {
+            Console.WriteLine($"You guessed: {letter}");
+            if (usedLetters.Contains(letter)) return; // Letter has already been used
+            if (gameIsLost || gameIsWon) return;
+
+            usedLetters.Add(letter);
+
+            if (wordToGuess.Contains(letter))
+            {
+                lastGuessCorrect = true;
+                Console.WriteLine($"Guess was correct: {letter}");
+            } else
+            {
+                lastGuessCorrect = false;
+                Console.WriteLine($"Guess was not correct: {letter}");
+                numWrongLetters++;
+                if(numWrongLetters > numLives)
+                {
+                    gameIsLost = true;
+                }
+            }
+            showVisibleWord();
         }
 
     }
