@@ -94,27 +94,33 @@ namespace Galgeleg
             {
                 throw new Exception("Word list is empty");
             }
-            wordToGuess = wordList[random.Next(wordList.Count)].ToString();
+            wordToGuess = wordList[random.Next(wordList.Count)].ToString().ToUpper();
+            Console.WriteLine($"Ordet du skal gætte er: {wordToGuess}");
             showVisibleWord();
         }
 
         private void showVisibleWord()
         {
             visibleWord = "";
-            for(int i = 0; i < wordToGuess.Length; i++)
+            gameIsWon = true;
+            foreach(char letter in wordToGuess)
             {
-                String letter = wordToGuess.Substring(i, ++i); //Måske bugger ++i
-                if (usedLetters.Contains(letter))
+                
+                Console.WriteLine("Letter er :" + letter);
+              
+                if (usedLetters.Contains(letter.ToString()))
                 {
                     visibleWord += letter;
                 } else
                 {
                     visibleWord += "*";
+                    gameIsWon = false;
                 }
             }
         }
-        public void submitLetter(char letter)
+        public void submitLetter(string letter)
         {
+            letter = letter.ToUpper();
             Console.WriteLine($"You guessed: {letter}");
             if (usedLetters.Contains(letter)) return; // Letter has already been used
             if (gameIsLost || gameIsWon) return;
@@ -136,6 +142,22 @@ namespace Galgeleg
                 }
             }
             showVisibleWord();
+            logStatus();
+        }
+        public void logStatus()
+        {
+            Console.WriteLine("---------- ");
+            Console.WriteLine("- ordet (skjult) = " + wordToGuess);
+            Console.WriteLine("- synligtOrd = " + visibleWord);
+            Console.WriteLine("- forkerteBogstaver = " + numWrongLetters + "\n");
+            foreach(string s in usedLetters)
+            {
+                Console.Write(s + " ");
+            }
+            
+            if (gameIsLost) Console.WriteLine("- SPILLET ER TABT");
+            if (gameIsWon) Console.WriteLine("- SPILLET ER VUNDET");
+            Console.WriteLine("\n---------- ");
         }
 
     }

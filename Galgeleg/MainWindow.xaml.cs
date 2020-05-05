@@ -23,6 +23,8 @@ namespace Galgeleg
         public MainWindow()
         {
             InitializeComponent();
+            Game game = new Game();
+            game.Test();
         }
     }
 }

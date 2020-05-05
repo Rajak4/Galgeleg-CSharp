@@ -1,0 +1,15 @@
+C:\Users\rasmu\Source\Repos\Galgeleg\Galgeleg\obj\Debug\Galgeleg.csprojAssemblyReference.cache
+C:\Users\rasmu\Source\Repos\Galgeleg\Galgeleg\obj\Debug\MainWindow.g.cs
+C:\Users\rasmu\Source\Repos\Galgeleg\Galgeleg\obj\Debug\App.g.cs
+C:\Users\rasmu\Source\Repos\Galgeleg\Galgeleg\obj\Debug\Galgeleg_MarkupCompile.cache
+C:\Users\rasmu\Source\Repos\Galgeleg\Galgeleg\obj\Debug\Galgeleg_MarkupCompile.lref
+C:\Users\rasmu\Source\Repos\Galgeleg\Galgeleg\bin\Debug\Galgeleg.exe.config
+C:\Users\rasmu\Source\Repos\Galgeleg\Galgeleg\bin\Debug\Galgeleg.exe
+C:\Users\rasmu\Source\Repos\Galgeleg\Galgeleg\bin\Debug\Galgeleg.pdb
+C:\Users\rasmu\Source\Repos\Galgeleg\Galgeleg\obj\Debug\MainWindow.baml
+C:\Users\rasmu\Source\Repos\Galgeleg\Galgeleg\obj\Debug\Galgeleg.g.resources
+C:\Users\rasmu\Source\Repos\Galgeleg\Galgeleg\obj\Debug\Galgeleg.Properties.Resources.resources
+C:\Users\rasmu\Source\Repos\Galgeleg\Galgeleg\obj\Debug\Galgeleg.csproj.GenerateResource.cache
+C:\Users\rasmu\Source\Repos\Galgeleg\Galgeleg\obj\Debug\Galgeleg.csproj.CoreCompileInputs.cache
+C:\Users\rasmu\Source\Repos\Galgeleg\Galgeleg\obj\Debug\Galgeleg.exe
+C:\Users\rasmu\Source\Repos\Galgeleg\Galgeleg\obj\Debug\Galgeleg.pdb
