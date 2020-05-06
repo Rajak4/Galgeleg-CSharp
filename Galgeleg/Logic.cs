@@ -82,7 +82,7 @@ namespace Galgeleg
 
 
 
-        public void resetGame() 
+        public void ResetGame() 
         {
             Random random = new Random();
             usedLetters.Clear();
@@ -96,18 +96,26 @@ namespace Galgeleg
             }
             wordToGuess = wordList[random.Next(wordList.Count)].ToString().ToUpper();
             Console.WriteLine($"Ordet du skal gætte er: {wordToGuess}");
-            showVisibleWord();
+            ShowVisibleWord();
         }
 
-        private void showVisibleWord()
+        public void ResetGame(string optionalWord)
+        {
+            usedLetters.Clear();
+            numWrongLetters = 0;
+            gameIsLost = false;
+            gameIsWon = false;
+
+            wordToGuess = optionalWord.ToUpper();
+            ShowVisibleWord();
+        }
+
+        private void ShowVisibleWord()
         {
             visibleWord = "";
             gameIsWon = true;
             foreach(char letter in wordToGuess)
             {
-                
-                Console.WriteLine("Letter er :" + letter);
-              
                 if (usedLetters.Contains(letter.ToString()))
                 {
                     visibleWord += letter;
@@ -118,7 +126,7 @@ namespace Galgeleg
                 }
             }
         }
-        public void submitLetter(string letter)
+        public void SubmitLetter(string letter)
         {
             letter = letter.ToUpper();
             Console.WriteLine($"You guessed: {letter}");
@@ -141,15 +149,15 @@ namespace Galgeleg
                     gameIsLost = true;
                 }
             }
-            showVisibleWord();
-            logStatus();
+            ShowVisibleWord();
+            LogStatus();
         }
-        public void logStatus()
+        public void LogStatus()
         {
             Console.WriteLine("---------- ");
             Console.WriteLine("- ordet (skjult) = " + wordToGuess);
             Console.WriteLine("- synligtOrd = " + visibleWord);
-            Console.WriteLine("- forkerteBogstaver = " + numWrongLetters + "\n");
+            Console.WriteLine("- forkerteBogstaver = " + numWrongLetters);
             foreach(string s in usedLetters)
             {
                 Console.Write(s + " ");

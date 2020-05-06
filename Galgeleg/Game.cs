@@ -11,21 +11,17 @@ namespace Galgeleg
 
         public void Test() {
 
+            // test to win game
             Logic logic = new Logic();
-            logic.resetGame();
+            string testWord = "testWord";
+            logic.ResetGame(testWord);
             logic.NumLives = 5;
-            logic.submitLetter("o");
-            logic.submitLetter("a");
-            logic.submitLetter("e");
-            logic.submitLetter("j");
-            logic.submitLetter("a");
-            logic.submitLetter("k");
-            logic.submitLetter("c");
-            logic.submitLetter("C");
-            logic.submitLetter("u");
-
-
-
+            
+            foreach(char c in testWord)
+            {
+                logic.SubmitLetter(c.ToString());
+            }
+            Console.WriteLine($"Game is won: {logic.GameIsWon}");
         }
             
     }
