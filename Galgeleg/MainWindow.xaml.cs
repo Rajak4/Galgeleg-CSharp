@@ -20,12 +20,19 @@ namespace Galgeleg
     /// </summary>
     public partial class MainWindow : Window
     {
+        Game game = new Game();
+        Logic logic = new Logic();
+        string myWord;
+
         public MainWindow()
         {
             InitializeComponent();
-            Game game = new Game();
-            ShowLetterFields();
+            
+            logic.ResetGame("badekar");
+            myWord = logic.VisibleWord;
+
             //MakeLetterBox();
+            AddLetters();
             game.Test();
         }
 
@@ -48,6 +55,72 @@ namespace Galgeleg
             };
         }
 
+        // Adding textBlocks to the stackpanel - each holding 1 letter of the word
+        public void AddLetters()
+        {
+            for(int i = 0; i < myWord.Length; i++)
+            {
+                myStackPanel.Children.Add(new TextBlock
+                {
+                    Name = "letter" + i,
+                    FontSize = 24,
+                    Padding = new Thickness(5),
+                    Text = myWord[i].ToString().ToUpper()
+                });
+            }
+        }
+
+        // Look through all children in stackpanel and update each textBlock
+        public void UpdateLetters(string updatedWord)
+        {
+            for (int i = 0; i < myStackPanel.Children.Count; i++)
+            {
+                object child = myStackPanel.Children[i];
+                if (child is FrameworkElement)
+                {
+                    (child as TextBlock).Text = updatedWord[i].ToString();
+                }
+            }
+        }
+
+        private string GetLetter(KeyEventArgs key)
+        {
+            // get a to z
+            if (key.Key >= Key.A && key.Key <= Key.Z)
+            {
+                return key.Key.ToString();
+            }
+
+            // get æ, ø and å
+            switch (key.Key)
+            {
+                case Key.Oem3:
+                    return "Æ";
+                case Key.OemQuotes:
+                    return "Ø";
+                case Key.Oem6:
+                    return "Å";
+            }
+
+            // return empty string if not a letter
+            return "";
+        }
+
+        private void Window_KeyDown(object sender, KeyEventArgs e)
+        {
+            string letter = GetLetter(e);
+            if (letter.Length > 0) {
+                Console.WriteLine("letter " + letter);
+                logic.SubmitLetter(letter);
+                UpdateLetters(logic.VisibleWord);
+            } else
+            {
+                Console.WriteLine("ikke letter");
+            }
+        }
+
+
+        /*
         public void ShowLetterFields()
         {
             StackPanel sp = new StackPanel
@@ -59,6 +132,7 @@ namespace Galgeleg
             
             for (int i = 0; i < 5; i++)
             {
+
 
                 TextBlock tb = new TextBlock
                 {
@@ -77,7 +151,7 @@ namespace Galgeleg
                     Child = tb
                 });
             }
-            
         }
+        */
     }
 }

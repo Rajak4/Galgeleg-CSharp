@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Galgeleg"
         mc:Ignorable="d"
-        Title="MainWindow" Height="700" Width="700">
+        Title="MainWindow" Height="700" Width="700" KeyDown="Window_KeyDown">
     <!--Define columns and rows-->
         <Grid x:Name="myGrid">
         <Grid.ColumnDefinitions>
@@ -32,6 +32,7 @@
             <Image Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2" Grid.RowSpan="2"
                    Source="Img/purple.png" Width="300" Height="300"/>
         <!--letters-->
-            <StackPanel Grid.Column="2" Grid.Row="4" Grid.ColumnSpan="2" x:Name="myStackPanel"/>
+        <StackPanel Grid.Column="2" Grid.Row="4" Grid.ColumnSpan="2" Orientation="Horizontal" x:Name="myStackPanel"/>
+
     </Grid>
 </Window>

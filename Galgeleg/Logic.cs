@@ -17,7 +17,7 @@ namespace Galgeleg
         private bool gameIsWon;
         private bool gameIsLost;
         private String visibleWord;
-        private int numLives; // Skal lige sættes et sted
+        private int numLives = 5; // Skal lige sættes et sted
 
 
         public Logic()
@@ -126,6 +126,7 @@ namespace Galgeleg
                 }
             }
         }
+
         public void SubmitLetter(string letter)
         {
             letter = letter.ToUpper();
@@ -152,6 +153,7 @@ namespace Galgeleg
             ShowVisibleWord();
             LogStatus();
         }
+
         public void LogStatus()
         {
             Console.WriteLine("---------- ");
