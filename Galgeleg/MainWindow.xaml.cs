@@ -20,20 +20,47 @@ namespace Galgeleg
     /// </summary>
     public partial class MainWindow : Window
     {
-        Game game = new Game();
+        Test test = new Test();
         Logic logic = new Logic();
         string myWord;
+        string imgPath = "Img/man/hangman";
+        string imgType = ".png";
 
         public MainWindow()
         {
             InitializeComponent();
-            
-            logic.ResetGame("badekar");
-            myWord = logic.VisibleWord;
+
+            GameStart();
 
             //MakeLetterBox();
             AddLetters();
-            game.Test();
+            test.Win_test();
+        }
+
+        public void GameStart()
+        {
+            logic.ResetGame("badekar");
+            myWord = logic.VisibleWord;
+        }
+
+        public void GameLoop()
+        {
+            if (logic.GameIsLost)
+            {
+                Console.WriteLine("SPILLET ER TABT!");
+            } else if (logic.GameIsWon)
+            {
+                Console.WriteLine("SPILLET ER VUNDET!");
+            } else
+            {
+                // gets the full image name
+                string imageName = imgPath + logic.NumWrongLetters + imgType;
+
+                // change the image
+                BitmapImage image = new BitmapImage(new Uri(imageName, UriKind.RelativeOrAbsolute));
+                hangmanImg.Source = image;
+            }
+            
         }
 
         public void MakeLetterBox()
@@ -83,6 +110,7 @@ namespace Galgeleg
             }
         }
 
+        // returns the letter from keyboard input
         private string GetLetter(KeyEventArgs key)
         {
             // get a to z
@@ -106,6 +134,7 @@ namespace Galgeleg
             return "";
         }
 
+        // gets keyboard inputs
         private void Window_KeyDown(object sender, KeyEventArgs e)
         {
             string letter = GetLetter(e);
@@ -113,6 +142,8 @@ namespace Galgeleg
                 Console.WriteLine("letter " + letter);
                 logic.SubmitLetter(letter);
                 UpdateLetters(logic.VisibleWord);
+                GameLoop();
+
             } else
             {
                 Console.WriteLine("ikke letter");
@@ -120,38 +151,6 @@ namespace Galgeleg
         }
 
 
-        /*
-        public void ShowLetterFields()
-        {
-            StackPanel sp = new StackPanel
-            {
-                Name = "myPanel",
-                Orientation = Orientation.Horizontal
-            };
-            myStackPanel.Children.Add(sp);
-            
-            for (int i = 0; i < 5; i++)
-            {
-
-
-                TextBlock tb = new TextBlock
-                {
-                    Name = "myTb" + i,
-                    FontSize = 24,
-                    Text = "H"
-                };
-
-                sp.Children.Add(new Border
-                {
-                    BorderThickness = new Thickness(0, 0, 0, 4),
-                    BorderBrush = Brushes.Black,
-                    MinWidth = 15,
-                    HorizontalAlignment = HorizontalAlignment.Left,
-                    VerticalAlignment = VerticalAlignment.Top,
-                    Child = tb
-                });
-            }
-        }
-        */
+        
     }
 }

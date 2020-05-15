@@ -64,7 +64,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Game.cs" />
+    <Compile Include="Test.cs" />
     <Compile Include="Logic.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -98,10 +98,19 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Img\Proto.png" />
+    <Resource Include="img\Proto.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Img\purple.png" />
+    <Resource Include="img\purple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\man\hangman0.png" />
+    <Resource Include="img\man\hangman1.png" />
+    <Resource Include="img\man\hangman2.png" />
+    <Resource Include="img\man\hangman3.png" />
+    <Resource Include="img\man\hangman4.png" />
+    <Resource Include="img\man\hangman5.png" />
+    <Resource Include="img\man\hangman6.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
