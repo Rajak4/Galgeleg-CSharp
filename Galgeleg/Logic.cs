@@ -9,14 +9,14 @@ namespace Galgeleg
 {
     class Logic
     {
-        private String wordToGuess;
+        private string wordToGuess;
         private ArrayList wordList = new ArrayList();
         private ArrayList usedLetters = new ArrayList();
         private int numWrongLetters = 0;
         private bool lastGuessCorrect;
         private bool gameIsWon;
         private bool gameIsLost;
-        private String visibleWord;
+        private string visibleWord;
         private int numLives = 5; // Skal lige sættes et sted
 
 
@@ -31,56 +31,6 @@ namespace Galgeleg
             wordList.Add("Fortan");
             wordList.Add("HTML");
         }
-
-        public int NumLives
-        {
-            get { return numLives; }
-            set { numLives = value; }
-        }
-
-        public String VisibleWord
-        {
-            get { return visibleWord; }
-            set { visibleWord = value; }
-        }
-
-        public String WordToGuess 
-        {
-            get { return wordToGuess; }
-            set { wordToGuess = value; }
-        }
-        public ArrayList WordList
-        {
-            get { return wordList; }
-            set { wordList = value; }
-        }
-        public ArrayList UsedLetters
-        {
-            get { return usedLetters; }
-            set { usedLetters = value; }
-        }
-        public int NumWrongLetters
-        {
-            get { return numWrongLetters; }
-            set { numWrongLetters = value; }
-        }
-        public bool LastGuessCorrect
-        {
-            get { return lastGuessCorrect; }
-            set { lastGuessCorrect = value; }
-        }
-        public bool GameIsWon
-        {
-            get { return gameIsWon; }
-            set { gameIsWon = value; }
-        }
-        public bool GameIsLost
-        {
-            get { return gameIsLost; }
-            set { gameIsLost = value; }
-        }
-
-
 
         public void ResetGame() 
         {
@@ -170,5 +120,53 @@ namespace Galgeleg
             Console.WriteLine("\n---------- ");
         }
 
+
+        public int NumLives
+        {
+            get { return numLives; }
+            set { numLives = value; }
+        }
+
+        public string VisibleWord
+        {
+            get { return visibleWord; }
+            set { visibleWord = value; }
+        }
+
+        public string WordToGuess
+        {
+            get { return wordToGuess; }
+            set { wordToGuess = value; }
+        }
+        public ArrayList WordList
+        {
+            get { return wordList; }
+            set { wordList = value; }
+        }
+        public ArrayList UsedLetters
+        {
+            get { return usedLetters; }
+            set { usedLetters = value; }
+        }
+        public int NumWrongLetters
+        {
+            get { return numWrongLetters; }
+            set { numWrongLetters = value; }
+        }
+        public bool LastGuessCorrect
+        {
+            get { return lastGuessCorrect; }
+            set { lastGuessCorrect = value; }
+        }
+        public bool GameIsWon
+        {
+            get { return gameIsWon; }
+            set { gameIsWon = value; }
+        }
+        public bool GameIsLost
+        {
+            get { return gameIsLost; }
+            set { gameIsLost = value; }
+        }
     }
 }
