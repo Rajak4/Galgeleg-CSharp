@@ -20,18 +20,20 @@ namespace Galgeleg
     /// </summary>
     public partial class MainWindow : Window
     {
-        Test test = new Test();
+        Game game = new Game();
         Logic logic = new Logic();
+        string myWord;
 
         public MainWindow()
         {
             InitializeComponent();
-            StackPanel st = myStackPanel;
-            Game game = new Game(st);
-            game.GameLoop();
-            //MakeLetterBox();
             
-            test.WinTest();
+            logic.ResetGame("badekar");
+            myWord = logic.VisibleWord;
+
+            //MakeLetterBox();
+            AddLetters();
+            game.Test();
         }
 
         public void MakeLetterBox()
@@ -53,24 +55,31 @@ namespace Galgeleg
             };
         }
 
-        public event EventHandler SendOver;
-
-        private void Window_KeyDown(object sender, KeyEventArgs e)
+        // Adding textBlocks to the stackpanel - each holding 1 letter of the word
+        public void AddLetters()
         {
-            if (SendOver != null)
+            for(int i = 0; i < myWord.Length; i++)
             {
-                SendOver(this, e);
+                myStackPanel.Children.Add(new TextBlock
+                {
+                    Name = "letter" + i,
+                    FontSize = 24,
+                    Padding = new Thickness(5),
+                    Text = myWord[i].ToString().ToUpper()
+                });
             }
-            string letter = GetLetter(e);
-            if (letter.Length > 0)
+        }
+
+        // Look through all children in stackpanel and update each textBlock
+        public void UpdateLetters(string updatedWord)
+        {
+            for (int i = 0; i < myStackPanel.Children.Count; i++)
             {
-                Console.WriteLine("letter " + letter);
-                //logic.SubmitLetter(letter);
-                //game.UpdateLetters(logic.VisibleWord);
-            }
-            else
-            {
-                Console.WriteLine("ikke letter");
+                object child = myStackPanel.Children[i];
+                if (child is FrameworkElement)
+                {
+                    (child as TextBlock).Text = updatedWord[i].ToString();
+                }
             }
         }
 
@@ -95,6 +104,19 @@ namespace Galgeleg
 
             // return empty string if not a letter
             return "";
+        }
+
+        private void Window_KeyDown(object sender, KeyEventArgs e)
+        {
+            string letter = GetLetter(e);
+            if (letter.Length > 0) {
+                Console.WriteLine("letter " + letter);
+                logic.SubmitLetter(letter);
+                UpdateLetters(logic.VisibleWord);
+            } else
+            {
+                Console.WriteLine("ikke letter");
+            }
         }
 
 

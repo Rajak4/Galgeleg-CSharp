@@ -30,7 +30,7 @@
                     Text="Galge Spil" FontSize="28"/>
         <!--image-->
             <Image Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2" Grid.RowSpan="2"
-                   Source="Img/man/hangman0.png" Width="300" Height="300"/>
+                   Source="Img/purple.png" Width="300" Height="300"/>
         <!--letters-->
         <StackPanel Grid.Column="2" Grid.Row="4" Grid.ColumnSpan="2" Orientation="Horizontal" x:Name="myStackPanel"/>
 
