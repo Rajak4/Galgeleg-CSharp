@@ -4,6 +4,7 @@
 winexe
 C#
 .cs
+<<<<<<< HEAD
 <<<<<<< 6b69ceec9420a67c3e0138abe0b36f1e71cf3ac1
 C:\Users\patri\Google Drive\DTU\C# og .NET\programs\Hangman\Galgeleg\obj\Debug\
 =======
@@ -13,10 +14,14 @@ C:\Users\patri\Google Drive\DTU\C# og .NET\programs\Hangman\Galgeleg-CSharp\Galg
 C:\Users\rasmu\Source\Repos\Galgeleg-CSharp\Galgeleg\obj\Debug\
 >>>>>>> 08e2272c906303474a497fc0fa64979668282340
 >>>>>>> henter infor om vejret fra yr
+=======
+C:\Users\rasmu\Source\Repos\Galgeleg-CSharp\Galgeleg\obj\Debug\
+>>>>>>> master
 Galgeleg
 none
 false
 DEBUG;TRACE
+<<<<<<< HEAD
 <<<<<<< 6b69ceec9420a67c3e0138abe0b36f1e71cf3ac1
 C:\Users\patri\Google Drive\DTU\C# og .NET\programs\Hangman\Galgeleg\App.xaml
 =======
@@ -26,6 +31,9 @@ C:\Users\patri\Google Drive\DTU\C# og .NET\programs\Hangman\Galgeleg-CSharp\Galg
 C:\Users\rasmu\Source\Repos\Galgeleg-CSharp\Galgeleg\App.xaml
 >>>>>>> 08e2272c906303474a497fc0fa64979668282340
 >>>>>>> henter infor om vejret fra yr
+=======
+C:\Users\rasmu\Source\Repos\Galgeleg-CSharp\Galgeleg\App.xaml
+>>>>>>> master
 11151548125
 
 7360758985
