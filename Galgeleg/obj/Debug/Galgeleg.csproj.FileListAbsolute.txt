@@ -28,3 +28,38 @@ C:\Users\patri\Google Drive\DTU\C# og .NET\programs\Hangman\Galgeleg\obj\Debug\G
 C:\Users\patri\Google Drive\DTU\C# og .NET\programs\Hangman\Galgeleg\obj\Debug\Galgeleg.csproj.CoreCompileInputs.cache
 C:\Users\patri\Google Drive\DTU\C# og .NET\programs\Hangman\Galgeleg\obj\Debug\Galgeleg.exe
 C:\Users\patri\Google Drive\DTU\C# og .NET\programs\Hangman\Galgeleg\obj\Debug\Galgeleg.pdb
+<<<<<<< 6b69ceec9420a67c3e0138abe0b36f1e71cf3ac1
+=======
+<<<<<<< HEAD
+C:\Users\patri\Google Drive\DTU\C# og .NET\programs\Hangman\Galgeleg-CSharp\Galgeleg\bin\Debug\Galgeleg.exe.config
+C:\Users\patri\Google Drive\DTU\C# og .NET\programs\Hangman\Galgeleg-CSharp\Galgeleg\bin\Debug\Galgeleg.exe
+C:\Users\patri\Google Drive\DTU\C# og .NET\programs\Hangman\Galgeleg-CSharp\Galgeleg\bin\Debug\Galgeleg.pdb
+C:\Users\patri\Google Drive\DTU\C# og .NET\programs\Hangman\Galgeleg-CSharp\Galgeleg\obj\Debug\Galgeleg.csprojAssemblyReference.cache
+C:\Users\patri\Google Drive\DTU\C# og .NET\programs\Hangman\Galgeleg-CSharp\Galgeleg\obj\Debug\MainWindow.g.cs
+C:\Users\patri\Google Drive\DTU\C# og .NET\programs\Hangman\Galgeleg-CSharp\Galgeleg\obj\Debug\App.g.cs
+C:\Users\patri\Google Drive\DTU\C# og .NET\programs\Hangman\Galgeleg-CSharp\Galgeleg\obj\Debug\Galgeleg_MarkupCompile.cache
+C:\Users\patri\Google Drive\DTU\C# og .NET\programs\Hangman\Galgeleg-CSharp\Galgeleg\obj\Debug\Galgeleg_MarkupCompile.lref
+C:\Users\patri\Google Drive\DTU\C# og .NET\programs\Hangman\Galgeleg-CSharp\Galgeleg\obj\Debug\MainWindow.baml
+C:\Users\patri\Google Drive\DTU\C# og .NET\programs\Hangman\Galgeleg-CSharp\Galgeleg\obj\Debug\Galgeleg.g.resources
+C:\Users\patri\Google Drive\DTU\C# og .NET\programs\Hangman\Galgeleg-CSharp\Galgeleg\obj\Debug\Galgeleg.Properties.Resources.resources
+C:\Users\patri\Google Drive\DTU\C# og .NET\programs\Hangman\Galgeleg-CSharp\Galgeleg\obj\Debug\Galgeleg.csproj.GenerateResource.cache
+C:\Users\patri\Google Drive\DTU\C# og .NET\programs\Hangman\Galgeleg-CSharp\Galgeleg\obj\Debug\Galgeleg.exe
+C:\Users\patri\Google Drive\DTU\C# og .NET\programs\Hangman\Galgeleg-CSharp\Galgeleg\obj\Debug\Galgeleg.pdb
+=======
+C:\Users\rasmu\Source\Repos\Galgeleg-CSharp\Galgeleg\bin\Debug\Galgeleg.exe.config
+C:\Users\rasmu\Source\Repos\Galgeleg-CSharp\Galgeleg\bin\Debug\Galgeleg.exe
+C:\Users\rasmu\Source\Repos\Galgeleg-CSharp\Galgeleg\bin\Debug\Galgeleg.pdb
+C:\Users\rasmu\Source\Repos\Galgeleg-CSharp\Galgeleg\obj\Debug\Galgeleg.csprojAssemblyReference.cache
+C:\Users\rasmu\Source\Repos\Galgeleg-CSharp\Galgeleg\obj\Debug\MainWindow.g.cs
+C:\Users\rasmu\Source\Repos\Galgeleg-CSharp\Galgeleg\obj\Debug\App.g.cs
+C:\Users\rasmu\Source\Repos\Galgeleg-CSharp\Galgeleg\obj\Debug\Galgeleg_MarkupCompile.cache
+C:\Users\rasmu\Source\Repos\Galgeleg-CSharp\Galgeleg\obj\Debug\Galgeleg_MarkupCompile.lref
+C:\Users\rasmu\Source\Repos\Galgeleg-CSharp\Galgeleg\obj\Debug\MainWindow.baml
+C:\Users\rasmu\Source\Repos\Galgeleg-CSharp\Galgeleg\obj\Debug\Galgeleg.g.resources
+C:\Users\rasmu\Source\Repos\Galgeleg-CSharp\Galgeleg\obj\Debug\Galgeleg.Properties.Resources.resources
+C:\Users\rasmu\Source\Repos\Galgeleg-CSharp\Galgeleg\obj\Debug\Galgeleg.csproj.GenerateResource.cache
+C:\Users\rasmu\Source\Repos\Galgeleg-CSharp\Galgeleg\obj\Debug\Galgeleg.csproj.CoreCompileInputs.cache
+C:\Users\rasmu\Source\Repos\Galgeleg-CSharp\Galgeleg\obj\Debug\Galgeleg.exe
+C:\Users\rasmu\Source\Repos\Galgeleg-CSharp\Galgeleg\obj\Debug\Galgeleg.pdb
+>>>>>>> 08e2272c906303474a497fc0fa64979668282340
+>>>>>>> henter infor om vejret fra yr
