@@ -35,6 +35,8 @@ namespace Galgeleg
             //MakeLetterBox();
             AddLetters();
             test.Win_test();
+
+            playAgain.Visibility = Visibility.Hidden;
         }
 
         public void GameStart()
@@ -47,9 +49,11 @@ namespace Galgeleg
         {
             if (logic.GameIsLost)
             {
+                playAgain.Visibility = Visibility.Visible;
                 Console.WriteLine("SPILLET ER TABT!");
             } else if (logic.GameIsWon)
             {
+                playAgain.Visibility = Visibility.Visible;
                 Console.WriteLine("SPILLET ER VUNDET!");
             } else
             {
@@ -150,7 +154,11 @@ namespace Galgeleg
             }
         }
 
-
-        
+        private void playAgain_Click(object sender, RoutedEventArgs e)
+        {
+            
+            logic.ResetGame();
+           // UI skal også resettes
+        }
     }
 }
